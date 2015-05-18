@@ -1,1 +1,8 @@
-Companies
+
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+
+<h1>Companies</h1>
+
+<%= link_to "Create a New Company", new_company_path %>

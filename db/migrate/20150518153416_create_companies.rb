@@ -4,7 +4,6 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.integer :price
-      t.integer :industry_id
 
       t.timestamps null: false
     end

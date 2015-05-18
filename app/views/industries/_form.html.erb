@@ -1,11 +1,20 @@
 <%= form_for @industry do |f| %>
 
-<%= f.label :name %>
+<div><%= f.label :name %>
 <%= f.text_field :name %>
+</div>
 
+<div>
 <%= f.label :description %>
 <%= f.text_area :description %>
+</div>
 
+<div>
+<%= f.label :companies %>
+</div>
+
+<div>
 <%= f.submit %>
+</div>
 
 <% end %>
