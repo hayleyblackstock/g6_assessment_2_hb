@@ -41,7 +41,7 @@ end
 
 private
 def company_params
-  params.require(:company).permit(:name, :description, :price, :created_at, :updated_at)
+  params.require(:company).permit(:name, :description, :price, :created_at, :updated_at, :industry_id)
 end
 
 end

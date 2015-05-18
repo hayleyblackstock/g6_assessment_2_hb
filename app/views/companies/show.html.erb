@@ -5,7 +5,7 @@
 <h1>Show Page for <%= @company.name %>  </h1>
 
 <div> <%= link_to "Edit Company", edit_company_path(@company) %> </div>
-<div> <%= link_to "Delete Company", company_path(@company), :confirm => 'Are you sure?', :method => :delete %> </div>
+<div> <%= link_to "Delete Company", company_path(@company), data: { confirm: 'Are you sure?'}, :method => :delete %> </div>
 
 <p><strong>Name:</strong> <%= @company.name %> </p>
 <p><strong>Description:</strong> <%= @company.description %> </p>

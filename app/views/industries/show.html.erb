@@ -5,7 +5,8 @@
 <h1>Show Page for the <%= @industry.name %> Industry </h1>
 
 <div> <%= link_to "Edit Industry", edit_industry_path(@industry) %> </div>
-<div> <%= link_to "Delete Industry", industry_path(@industry), :confirm => 'Are you sure?', :method => :delete %> </div>
+<div> <%= link_to "Delete Company", industry_path(@industry), data: { confirm: 'Are you sure?'}, :method => :delete %> </div>
+
 <p><strong>Name:</strong> <%= @industry.name %> </p>
 <p><strong>Description:</strong> <%= @industry.description %> </p>
 <p><strong>Created At:</strong> <%= @industry.created_at %></p>

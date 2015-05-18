@@ -9,6 +9,9 @@
 <%= f.label :price %>
 <%= f.number_field :price %>
 
+<%= f.label :industry %>
+<%= f.collection_select 'tax_ids', @taxes, :id, :name, {:name => 'line_item[tax_ids][]'} %>
+
 <%= f.submit %>
 
 <% end %>
