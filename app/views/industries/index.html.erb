@@ -1,1 +1,44 @@
-Industries
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+
+<h1>Industries</h1>
+
+<%= link_to "Create a New Industry", new_industry_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>
+        Industry Name
+      </th>
+      <th>
+        Created At
+      </th>
+      <th>
+        Updated At
+      </th>
+      <th>
+        Companies in Industry
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @industries.each do |industry| %>
+    <tr>
+      <td>
+        <%= link_to industry.name, industry_path(industry) %>
+      </td>
+      <td>
+        <%= industry.created_at  %>
+      </td>
+      <td>
+        <%= industry.updated_at  %>
+      </td>
+      <td>
+        THIS IS WHERE COMPANIES GO!
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
