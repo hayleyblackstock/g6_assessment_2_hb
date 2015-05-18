@@ -9,9 +9,13 @@
 <%= f.label :price %>
 <%= f.number_field :price %>
 
-<%= f.label :industry %>
-<%= f.collection_select 'tax_ids', @taxes, :id, :name, {:name => 'line_item[tax_ids][]'} %>
+
+<% for industry in Industry.all %>
+           <div>
+               <%= check_box_tag "company[industry_ids][]", industry.id, @company.industries.include?(industry) %>
+               <%= industry.name %>
+           </div>
+       <% end %>
 
 <%= f.submit %>
-
 <% end %>

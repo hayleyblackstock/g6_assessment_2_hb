@@ -21,10 +21,12 @@
     </tr>
   </thead>
   <tbody>
+    <% @company.industries.each do |industry| %>
     <tr>
       <td>
-
+        <%=  industry.name %>
       </td>
     </tr>
+    <% end %>
   </tbody>
 </table>

@@ -1,20 +1,23 @@
 <%= form_for @industry do |f| %>
 
-<div><%= f.label :name %>
+<%= f.label :name %>
 <%= f.text_field :name %>
-</div>
 
-<div>
+
+
 <%= f.label :description %>
 <%= f.text_area :description %>
-</div>
 
-<div>
-<%= f.label :companies %>
-</div>
 
-<div>
+<% for company in Company.all %>
+           <div>
+               <%= check_box_tag "industry[company_ids][]", company.id, @industry.companies.include?(company) %>
+               <%= company.name %>
+           </div>
+       <% end %>
+
+
+
 <%= f.submit %>
-</div>
 
 <% end %>
