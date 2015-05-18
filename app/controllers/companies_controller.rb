@@ -9,7 +9,7 @@ def new
 end
 
 def create
-  @company = Company.new(comapny_params)
+  @company = Company.new(company_params)
   if @company.save
     redirect_to company_path(@company), notice: "Company was created successfully!"
   else
@@ -19,7 +19,7 @@ end
 
 def update
   @company = Company.find(params[:id])
-  if @company.update(comapny_params)
+  if @company.update(company_params)
     redirect_to companies_path, notice: "Company was updated successfully!"
   end
 end
@@ -41,7 +41,7 @@ end
 
 private
 def company_params
-  params.require(:company).permit(:name, description, :price, :created_at, :updated_at)
+  params.require(:company).permit(:name, :description, :price, :created_at, :updated_at)
 end
 
 end

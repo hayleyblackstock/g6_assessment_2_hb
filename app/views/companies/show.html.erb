@@ -1,0 +1,30 @@
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+
+<h1>Show Page for <%= @company.name %>  </h1>
+
+<div> <%= link_to "Edit Company", edit_company_path(@company) %> </div>
+<div> <%= link_to "Delete Company", company_path(@company), :confirm => 'Are you sure?', :method => :delete %> </div>
+
+<p><strong>Name:</strong> <%= @company.name %> </p>
+<p><strong>Description:</strong> <%= @company.description %> </p>
+<p><strong>Price:</strong> $<%= @company.price %> </p>
+<p><strong>Created At:</strong> <%= @company.created_at %></p>
+<p><strong>Updated At: </strong> <%= @company.updated_at %></p>
+<table>
+  <thead>
+    <tr>
+      <th>
+        Industries Apart Of:
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+
+      </td>
+    </tr>
+  </tbody>
+</table>

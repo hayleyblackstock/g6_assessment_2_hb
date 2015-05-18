@@ -6,3 +6,45 @@
 <h1>Companies</h1>
 
 <%= link_to "Create a New Company", new_company_path %>
+<table>
+  <thead>
+    <tr>
+      <th>
+        Company Name
+      </th>
+      <th>
+        Price
+      </th>
+      <th>
+        Created At
+      </th>
+      <th>
+        Updated At
+      </th>
+      <th>
+        Industries Apart Of
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @companies.each do |company| %>
+    <tr>
+      <td>
+        <%= link_to company.name, company_path(company) %>
+      </td>
+      <td>
+        $<%= company.price  %>
+      </td>
+      <td>
+        <%= company.created_at %>
+      </td>
+      <td>
+        <%= company.updated_at  %>
+      </td>
+      <td>
+        THIS IS WHERE INDUSTRIES GO!
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
