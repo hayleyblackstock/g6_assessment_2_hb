@@ -36,7 +36,9 @@
         <%= industry.updated_at  %>
       </td>
       <td>
-        THIS IS WHERE COMPANIES GO!
+        <% industry.companies.each do |company| %>
+            <%=  company.name %>
+        <% end %>
       </td>
     </tr>
     <% end %>

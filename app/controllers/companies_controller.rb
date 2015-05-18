@@ -2,6 +2,8 @@ class CompaniesController < ApplicationController
 
 def index
   @companies = Company.all
+  @industries = Industry.all
+  @industry = Industry.new
 end
 
 def new
